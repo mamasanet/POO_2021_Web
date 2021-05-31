@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Registro de Usuario</h3>
+      <hr/>           
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "name">Nombre</label><br>
+         <input type = "text" name = "name" placeholder = "Nombre" /><br>
+         <label for = "email">City</label><br>
+         <input type = "text" name = "city" placeholder = "city" /><br>
+         <label for = "addr">addr</label><br>
+         <textarea name = "addr" placeholder = "addr"></textarea><br>
+         <label for = "PIN">City</label><br>
+         <input type = "text" name = "pin" placeholder = "pin" /><br>
+         <input type = "submit" value = "Submit" />
+      </form>
+   </body>
+</html>

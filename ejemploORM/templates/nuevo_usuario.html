@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Registro de Usuario</h3>
+      <hr/>           
+      <form action = "{{ request.path }}" method = "post">
+         <label for = "nombre">Nombre</label><br>
+         <input type = "text" name = "nombre" placeholder = "Nombre" /><br>
+		 
+         <label for = "email">Correo Electrónico</label><br>
+         <input type = "text" name = "email" placeholder = "email" /><br>
+		 
+         <label for = "password">Contraseña</label><br>
+         <input name = "password" placeholder = "password"/><br>
+		 <br>
+         <input type = "submit" value = "Submit" />
+		 <br><br>
+		 <a href = "{{ url_for('inicio') }}"> Inicio </a>
+      </form>
+   </body>
+</html>

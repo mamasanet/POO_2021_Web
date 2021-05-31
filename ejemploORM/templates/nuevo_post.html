@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Nuevo Post</h3>
+      <hr/>           
+      <form action = "{{ request.path }}" method = "post">   		 
+         <label for = "email">Correo Electrónico</label><br>
+         <input type = "text" name = "email" placeholder = "email" /><br>		 
+        
+		 <br>
+         <input type = "submit" value = "Submit" />
+      </form>
+   </body>
+</html>

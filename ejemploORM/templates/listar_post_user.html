@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      <form action="{{ request.path }}" method="POST">
+      <h3>Comentarios registrados </h3>
+        {% if users is not none :%}		
+			<label for = "usuarios">Usuarios:</label> <br>
+			<select id= "usuarios" name="usuarios" width="500px">
+            {% for user in users %}
+                <option value="{{ user.id }}">{{ user.nombre}}</option>
+			{% endfor %}
+			
+			</select>
+			<br><br>
+			<input class="button1" type="submit" value="Select">
+		{% endif %}
+		
+		{% if user_seleccionado is not none :%}	
+			<h2> {{ user_seleccionado.nombre}} ({{ user_seleccionado.email}}) escribió los siguientes post:</h2>
+			 {% for postu in user_seleccionado.post %}
+               <ul>
+                  <li>{{ postu.contenido }}</li>
+               </ul>
+            {% endfor %}
+		{% endif %} 
+	   <br><br><a href = "{{ url_for('inicio') }}"> Inicio </a>
+	   
+	  </form>
+   </body>
+</html>

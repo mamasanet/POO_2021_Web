@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+    <title>Aplicación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+  </head>   
+   <body>     
+	 <h1> Usuarios</h1>
+	 <ul>
+	    <li> <a href = "{{ url_for('registrarse') }}"> Registrarse como Usuario </a></li><br>
+    	<li> <a href = "{{ url_for('ingresar') }}"> Ingresar</a></li><br>
+
+	</ul>
+   </body>
+</html>
+

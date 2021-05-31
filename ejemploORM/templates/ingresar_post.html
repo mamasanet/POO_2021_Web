@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Nuevo Post</h3>
+      <hr/>           
+      <form action = "{{ url_for('ingresar_post') }}" method = "post">   
+		 
+        <label for = "contenido">{{user.nombre}} ingrese el comentario</label><br>
+        <textarea name = "contenido" placeholder = "comentario"></textarea><br><br>		 
+        <input id="userId" name="userId" type="hidden" value="{{user.id}}">
+		<br>
+        <input type = "submit" value = "Submit" />
+      </form>
+   </body>
+</html>

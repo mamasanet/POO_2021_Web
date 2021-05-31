@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+   
+      <h3>Usuarios regsitrados (<a href = "{{ url_for('new') }}"> Nuevo Usuario </a>)</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>Nombre</th>
+               <th>Correo</th>              
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for user in users %}
+               <tr>                  
+				  <td><a href="{{ url_for('post_user', user_id=user.id) }}">{{ user.nombre }}</a></td>
+                  <td>{{ user.email }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+	  <br><a href = "{{ url_for('inicio') }}"> Inicio </a>
+   </body>
+</html>
